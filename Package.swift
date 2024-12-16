@@ -1,21 +1,33 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.8
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "situm-sdk-spm",
+    name: "SitumSDK",
+    platforms: [.iOS(.v12)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "situm-sdk-spm",
-            targets: ["situm-sdk-spm"]),
+            name: "SitumSDK",
+            targets: ["SitumSDK"]
+        ),
+    ],
+    dependencies: [
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "situm-sdk-spm"),
-
+        .binaryTarget(
+            name: "SitumSDK",
+            url: "https://repo.situm.es:443/artifactory/libs-release-local/iOS/SitumSDK/3.21.0/SitumSDK.xcframework.zip",
+                       checksum: "2c2b38d4e7c5cb269e4fb49249f86d91b5d37c7d1b01960ad99f2cd144aecb85"
+        ),
     ]
 )
+
+
+/*
+ * Make sure to manually add the following dependencies in the project using this package:
+ *
+ * Frameworks: 'CoreLocation', 'CoreMotion'
+ * Libraries: 'c++', 'z'
+ * Linker settings: Add `$(inherited) -ObjC` to `OTHER_LDFLAGS` in the build settings of your project.
+ */
