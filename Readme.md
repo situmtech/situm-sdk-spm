@@ -1,9 +1,9 @@
 # SitumSDK
-Situm SDK is a Plug-and-play UX component that will allow you to bring wayfinding capabilities to your apps in no-time. You can find more information at [here](https://situm.com/docs/)
+Situm SDK is a Plug-and-play UX component that will allow you to bring wayfinding capabilities to your apps in no-time. You can find more information [here](https://situm.com/docs/)
 
 ## Adding the dependency
 
-`SitumSDK` is designed for Swift 5.8 and later. To depend on SitumSDK, either use Xcode to add the package dependency or add the following dependency to your Package.swift:
+`SitumSDK` is designed for Swift 5.8 and later. To depend on `SitumSDK`, either use Xcode to add the package dependency or add the following dependency to your Package.swift:
 
 ```swift
 .package(url: "https://github.com/situmtech/situm-sdk-spm.git", .upToNextMinor(from: "3.19.0")),
