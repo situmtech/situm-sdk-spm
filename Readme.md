@@ -1,5 +1,5 @@
 # SitumSDK
-Situm SDK is a Plug-and-play UX component that will allow you to bring wayfinding capabilities to your apps in no-time. You can find more information at [here][https://situm.com/docs/]
+Situm SDK is a Plug-and-play UX component that will allow you to bring wayfinding capabilities to your apps in no-time. You can find more information at [here](https://situm.com/docs/)
 
 ## Adding the dependency
 
@@ -13,8 +13,8 @@ The version 3.19.0 is just and example. Choose properly the range on versions yo
 
 Afterwards make sure you manually add the following system libraries and settings in the target that is using this package:
 
- * Frameworks: 'CoreLocation', 'CoreMotion'
- * Libraries: 'libc++.tbd', 'libz.tbd'
- * Linker settings: Apply the -ObjC flag. In “Configuration”, under “Linking/Other Linker Flags”, add the flag “-ObjC”.
+ * Frameworks: `CoreLocation`, `CoreMotion`
+ * Libraries: `libc++.tbd`, `libz.tbd`
+ * Linker settings: Apply the `-ObjC` flag. In `Configuration`, under `Linking/Other Linker Flags`, add the flag `-ObjC`.
 
  
