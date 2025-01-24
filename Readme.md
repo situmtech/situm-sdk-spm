@@ -13,8 +13,6 @@ The version 3.19.0 is just and example. Choose properly the range on versions yo
 
 Afterwards make sure you manually add the following system libraries and settings in the target that is using this package:
 
- * Frameworks: `CoreLocation`, `CoreMotion`
- * Libraries: `libc++.tbd`, `libz.tbd`
  * Linker settings: Apply the `-ObjC` flag. In `Configuration`, under `Linking/Other Linker Flags`, add the flag `-ObjC`.
 
  
