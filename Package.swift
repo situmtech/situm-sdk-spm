@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "SitumSDK",
-            targets: ["SitumSDK"]
+            targets: ["SitumSDKTarget"]
         ),
     ],
     dependencies: [
@@ -17,17 +17,28 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SitumSDK",
-            url: "https://repo.situm.es:443/artifactory/libs-release-local/iOS/SitumSDK/3.24.1/SitumSDK.xcframework.zip",
-                       checksum: "1c5d6c745a409aab4ded13dd9fc8ac9800330d29b6bd1a9eb0a54068735a7d71"
+            url: "https://repo.situm.es:443/artifactory/libs-release-local/iOS/SitumSDK/3.24.0/SitumSDK.xcframework.zip",
+            checksum: "40daa24db45ccbbeb009d7a5eb08bdf8a0f5aad501a46ae05453c8fd5e7aa8ba"
+        ),
+        .target(
+             name: "SitumSDKTarget",
+             dependencies: ["SitumSDK"],
+             path: "Situm",
+             sources: ["SITEmpty.m"],
+             publicHeadersPath: "Headers",
+             linkerSettings: [
+               .linkedLibrary("c++"),
+               .linkedLibrary("z"),
+               .linkedFramework("CoreLocation"),
+               .linkedFramework("CoreMotion"),
+             ]
         ),
     ]
 )
 
 
 /*
- * Make sure to manually add the following dependencies in the project using this package:
+ * Make sure to manually add the following settings in the project using this package:
  *
- * Frameworks: 'CoreLocation', 'CoreMotion'
- * Libraries: 'c++', 'z'
  * Linker settings: Add `$(inherited) -ObjC` to `OTHER_LDFLAGS` in the build settings of your project.
  */
