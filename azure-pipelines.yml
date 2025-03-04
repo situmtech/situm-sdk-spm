@@ -1,0 +1,34 @@
+trigger: 
+  - release/*
+
+pr: none
+
+variables:
+- group: Passwords
+- group: SoftwareVersions
+
+resources:
+  repositories:
+  - repository: sys_kubernetes_templates
+    type: bitbucket
+    endpoint: Bitbucket - sistemas
+    name: situm/sys-kubernetes-templates.git
+    ref: master
+
+pool:
+  vmImage: $(macOSVersion)
+
+steps:
+  - checkout: self
+    fetchDepth: 3
+
+  - template: azure-templates/publish_release.yml@sys_kubernetes_templates
+    parameters:
+      bitbucket:
+        bitbucket_user: situmops
+      system: "N/A"
+      server: "github"
+      repoFolder: "situm-sdk-spm"
+      mergeBranches:
+        - "main"
+
