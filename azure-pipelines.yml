@@ -22,6 +22,15 @@ steps:
   - checkout: self
     fetchDepth: 3
 
+  - bash: |
+
+      spmVersion=$(echo $(Build.SourceBranch) | cut -d "/" -f 4)
+      echo "##vso[task.setvariable variable=version]$(echo $spmVersion)"
+
+      echo -e "\n[+] Setting SPM version: $spmVersion\n"
+
+    displayName: Get parameters
+
   - template: azure-templates/publish_release.yml@sys_kubernetes_templates
     parameters:
       bitbucket:
