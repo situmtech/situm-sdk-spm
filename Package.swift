@@ -17,8 +17,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SitumSDK",
-            url: "https://repo.situm.es:443/artifactory/libs-release-local/iOS/SitumSDK/3.26.0/SitumSDK.xcframework.zip",
-            checksum: "d58116473e95af7734054f48f9ce18bcead43b9d3e5af1bf46a5a627180a5ebd"
+            url: "https://repo.situm.es:443/artifactory/libs-release-local/iOS/SitumSDK/3.28.0/SitumSDK.xcframework.zip",
+            checksum: "0d8f095dfe57fc5449521ac04948e873b69d1434da2fba0d2accaf95b11ebe4f"
         ),
         .target(
              name: "SitumSDKTarget",
