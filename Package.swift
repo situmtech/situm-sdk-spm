@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "SitumSDK",
-    platforms: [.iOS(.v12)],
+    platforms: [.iOS(.v16)],
     products: [
         .library(
             name: "SitumSDK",
@@ -29,6 +29,7 @@ let package = Package(
              linkerSettings: [
                .linkedLibrary("c++"),
                .linkedLibrary("z"),
+               .linkedLibrary("iconv"),
                .linkedFramework("CoreLocation"),
                .linkedFramework("CoreMotion"),
              ]
