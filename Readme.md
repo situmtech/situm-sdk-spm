@@ -11,6 +11,6 @@ Situm SDK is a Plug-and-play UX component that will allow you to bring wayfindin
 
 The version 3.41.0 is just an example. Choose properly the range on versions you want to rely on.
 
-The Swift Package declares ZipArchive 2.6.0 as an external dependency. The package links CoreLocation, CoreMotion, Security, libc++, libz, and libiconv.
+The package links CoreLocation, CoreMotion, Security, libc++, libz, and libiconv.
 
  
